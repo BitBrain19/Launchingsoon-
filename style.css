@@ -1,0 +1,215 @@
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+            background-color: #272727;
+        }
+
+        
+        #logo-container {
+            text-align: center;
+            margin-bottom: rem;
+        }
+
+        #logo {
+            width: 70px;
+            height: auto;
+        }
+
+        #logo-text {
+            font-size: 0.85rem;
+            color: #61BCE9;
+        }
+
+        .tech-items {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .tech-item {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #61BCE9;
+            border-radius: 50%;
+            animation: floatAnimation 3s ease-in-out infinite alternate;
+        }
+
+        .tech-item:nth-child(1) {
+            top: 10%;
+            left: 10%;
+        }
+
+        .tech-item:nth-child(2) {
+            top: 30%;
+            left: 80%;
+        }
+
+        .tech-item:nth-child(3) {
+            top: 50%;
+            left: 30%;
+        }
+
+        .tech-item:nth-child(4) {
+            top: 70%;
+            left: 60%;
+        }
+
+        .tech-item:nth-child(5) {
+            top: 90%;
+            left: 90%;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        #countdown {
+            margin-top: 2rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        #countdown h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #61BCE9, #70F1A1);
+            -webkit-background-clip: text;
+            color: transparent;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            text-shadow: 0 4px 6px rgba(97, 188, 233, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        #countdown p {
+            font-size: 1.5rem;
+            font-family: 'Ubuntu';
+            margin-top: 0;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        #progress-bar {
+            margin-top: 2rem;
+            width: 80%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0.25rem;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        #progress-bar div {
+            height: 20px;
+            width: 0;
+            background: linear-gradient(90deg, #61BCE9, #70F1A1);
+            animation: progressAnimation 4s linear;  
+        }
+
+        @keyframes progressAnimation {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: timeremaining;
+            }
+        }
+
+        #subscribe-form {
+            margin-top: 2rem;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        #subscribe-form p {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        #subscribe-form input[type="email"] {
+            padding: 1rem;
+            width: 100%;
+            border: 1px solid #61BCE9;
+            border-radius: 0.25rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        #subscribe-form input[type="submit"] {
+            padding: 1rem 2rem;
+            background-color: #61BCE9;
+            color: #fff;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #subscribe-form input[type="submit"]:hover {
+            background-color: #70F1A1;
+        }
+
+        #rocket {
+            font-size: 3rem;
+            margin-top: 2rem;
+            color: #61BCE9;
+            /* animation: bounce 2s infinite; */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+    
